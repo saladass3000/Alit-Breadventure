@@ -66,31 +66,16 @@
     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
-    <Compile Include="Assets\FlatKit\Demos\Common\Scripts\Motion\CameraMouseOrbit.cs" />
-    <Compile Include="Assets\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
-    <Compile Include="Assets\FlatKit\Scripts\UvScroller.cs" />
-    <Compile Include="Assets\FlatKit\Shaders\ImageEffects\Scripts\FogImageEffect.cs" />
-    <Compile Include="Assets\FlatKit\Shaders\ImageEffects\Scripts\OutlineImageEffect.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Test Asset\Tutorial_Info\Scripts\Readme.cs" />
     <Compile Include="Assets\Toon\AwesomeToonHelper.cs" />
-    <None Include="Assets\FlatKit\Shaders\ImageEffects\Resources\OutlinePlus.shader" />
-    <None Include="Assets\FlatKit\Shaders\StylizedSurface\DustyroomTerrainSplatmapCommon.cginc" />
     <None Include="Assets\_Udemy 3D Platformer Assets\navmesh link.txt" />
-    <None Include="Assets\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
-    <None Include="Assets\FlatKit\Shaders\StylizedSurface\DustyroomStylizedLighting.cginc" />
-    <None Include="Assets\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
     <None Include="Assets\_Udemy 3D Platformer Assets\Skybox\Fantasy Skybox FREE\Fog and Ambient references.txt" />
-    <None Include="Assets\FlatKit\Shaders\ImageEffects\Resources\FogPlus.shader" />
     <None Include="Assets\_Udemy 3D Platformer Assets\credits.txt" />
     <None Include="Assets\_Udemy 3D Platformer Assets\Skybox\Fantasy Skybox FREE\Readme.txt" />
-    <None Include="Assets\FlatKit\Shaders\StylizedSurface\StylizedSurfaceCutout.shader" />
     <None Include="Assets\Toon\Shaders\CustomLighting.hlsl" />
-    <None Include="Assets\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
-    <None Include="Assets\FlatKit\Shaders\LightPlane.shader" />
-    <None Include="Assets\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

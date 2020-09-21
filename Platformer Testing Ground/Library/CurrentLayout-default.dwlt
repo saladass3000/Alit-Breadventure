@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,7 +111,7 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 676, y: 442}
+  m_MinSize: {x: 676, y: 421}
   m_MaxSize: {x: 18002, y: 14021}
   vertical: 1
   controlID: 36
@@ -137,7 +137,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
-  m_MinSize: {x: 676, y: 442}
+  m_MinSize: {x: 676, y: 421}
   m_MaxSize: {x: 18002, y: 14021}
   vertical: 0
   controlID: 37
@@ -162,8 +162,8 @@ MonoBehaviour:
     y: 0
     width: 1258
     height: 947
-  m_MinSize: {x: 201, y: 442}
-  m_MaxSize: {x: 4001, y: 8042}
+  m_MinSize: {x: 201, y: 421}
+  m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
   controlID: 38
 --- !u!114 &8
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 1258
     height: 499
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 15}
@@ -589,9 +589,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.8915363, y: -8.819172, z: 23.11607}
+    m_Target: {x: -4.079619, y: 1.6240134, z: 43.882996}
     speed: 2
-    m_Value: {x: -0.8915363, y: -8.819172, z: 23.11607}
+    m_Value: {x: -4.079619, y: 1.6240134, z: 43.882996}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -637,13 +637,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.16899784, y: -0.0025823582, z: 0.0004135078, w: 0.98563415}
+    m_Target: {x: 0.052635532, y: -0.07593867, z: 0.003986541, w: 0.9957352}
     speed: 2
-    m_Value: {x: 0.17195082, y: -0.0011033964, z: 0.00016331852, w: 0.9851049}
+    m_Value: {x: 0.054127946, y: -0.07593102, z: 0.0041003684, w: 0.99563444}
   m_Size:
-    m_Target: 19.65608
+    m_Target: 31.494934
     speed: 2
-    m_Value: 18.809647
+    m_Value: 32.97899
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -697,8 +697,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
+      m_SelectedIDs: 12410000
+      m_LastClickedID: 16658
       m_ExpandedIDs: 3efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -909,21 +909,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Test Asset/Textures/Misc
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets
+  - Assets/Test Asset/Textures/Misc
   m_LastFoldersGridSize: 82
   m_LastProjectPath: C:\Users\Asus\Documents\GitHub\Alit-Breadventure\Platformer
     Testing Ground
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 56}
-    m_SelectedIDs: 0e400000
-    m_LastClickedID: 16398
-    m_ExpandedIDs: 000000000e4000001c4600001e46000020460000224600002446000000ca9a3b
+    scrollPos: {x: 0, y: 68}
+    m_SelectedIDs: 9c600000
+    m_LastClickedID: 24732
+    m_ExpandedIDs: 00000000f63f0000fa450000fc450000fe45000000460000024600006a600000766000009c600000a260000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -951,7 +951,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e4000001c4600001e460000204600002246000024460000
+    m_ExpandedIDs: 00000000f63f0000fa450000fc450000fe4500000046000002460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 9c3d00003e4e0000404e0000167500003c4e00003a4e00004e4e0000884c0000b24d0000124e0000be4f0000225000004a400100ae3e00001c37000000000000485b0000e0410000f0410000d6410000aa730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
