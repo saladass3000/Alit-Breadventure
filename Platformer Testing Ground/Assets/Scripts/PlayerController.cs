@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public float moveSpeed;
     public float jumpForce;
     public float gravityScale = 5f;
@@ -16,6 +18,11 @@ public class PlayerController : MonoBehaviour
     public float rotateSpeed = 5f;
 
     public Animator anim;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +41,13 @@ public class PlayerController : MonoBehaviour
 
         if (charCont.isGrounded) 
     {
-        
+            moveDirection.y = 0f;
+
         if (Input.GetButtonDown("Jump"))
         {
             moveDirection.y = jumpForce;
         }
+
     }
 
         moveDirection.y += Physics.gravity.y * gravityScale * Time.deltaTime;
