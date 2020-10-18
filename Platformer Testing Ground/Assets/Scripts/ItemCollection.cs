@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ItemCollection : MonoBehaviour
 {
-    
-    
+
+    public float rotateSpeed;
     private int totalRoti;
     public GameObject scoreText;
     // Start is called before the first frame update
@@ -16,6 +16,11 @@ public class ItemCollection : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if((other.gameObject.tag == "Player"))

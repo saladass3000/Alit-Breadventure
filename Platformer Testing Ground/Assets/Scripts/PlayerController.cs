@@ -19,6 +19,13 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
 
+    public bool isKnocking;
+    public float knockbackLength = .5f;
+    private float knockbackCounter;
+    public Vector2 knockbackPower;
+
+    public GameObject[] playerPieces;
+
     private void Awake()
     {
         instance = this;
@@ -32,38 +39,71 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float yStore = moveDirection.y;
-        //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-        moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
-        moveDirection.Normalize();
-        moveDirection = moveDirection * moveSpeed;
-        moveDirection.y = yStore;
-
-        if (charCont.isGrounded) 
-    {
-            moveDirection.y = 0f;
-
-        if (Input.GetButtonDown("Jump"))
+        if (!isKnocking)
         {
-            moveDirection.y = jumpForce;
+            float yStore = moveDirection.y;
+            //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+            moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
+            moveDirection.Normalize();
+            moveDirection = moveDirection * moveSpeed;
+            moveDirection.y = yStore;
+
+            if (charCont.isGrounded)
+            {
+                moveDirection.y = 0f;
+
+                if (Input.GetButtonDown("Jump"))
+                {
+                    moveDirection.y = jumpForce;
+                }
+
+            }
+
+            moveDirection.y += Physics.gravity.y * gravityScale * Time.deltaTime;
+            //transform.position = transform.position + (moveDirection * Time.deltaTime * moveSpeed);
+
+            charCont.Move(moveDirection * Time.deltaTime);
+
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
+                Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
+                // playerModel.transform.rotation = newRotation;
+                playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+            }
         }
-
-    }
-
-        moveDirection.y += Physics.gravity.y * gravityScale * Time.deltaTime;
-        //transform.position = transform.position + (moveDirection * Time.deltaTime * moveSpeed);
-
-        charCont.Move(moveDirection * Time.deltaTime);
-
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") !=0)
+        if (isKnocking)
         {
-            transform.rotation = Quaternion.Euler(0f, cam.transform.rotation.eulerAngles.y, 0f);
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
-            // playerModel.transform.rotation = newRotation;
-            playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+            knockbackCounter -= Time.deltaTime;
+
+            float yStore = moveDirection.y;
+            moveDirection = playerModel.transform.forward * -knockbackPower.x;
+            moveDirection.y = yStore;
+            moveDirection.y += Physics.gravity.y * gravityScale * Time.deltaTime;
+
+            if (charCont.isGrounded)
+            {
+                moveDirection.y = 0f;
+
+            }
+
+            charCont.Move(moveDirection * Time.deltaTime);
+
+            if (knockbackCounter <= 0)
+            {
+                isKnocking = false;
+            }
         }
 
         anim.SetFloat("Speed", Mathf.Abs( moveDirection.x) + Mathf.Abs(moveDirection.z));
         anim.SetBool("Grounded", charCont.isGrounded);
+    }
+
+    public void Knockback()
+    {
+        isKnocking = true;
+        knockbackCounter = knockbackLength;
+        moveDirection.y = knockbackPower.y;
+        charCont.Move(moveDirection * Time.deltaTime);
     }
 }

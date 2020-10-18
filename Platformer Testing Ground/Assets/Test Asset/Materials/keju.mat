@@ -21,9 +21,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: keju
-  m_Shader: {fileID: 4800000, guid: f7e38193b7f064d7380403618fd8b69e, type: 3}
-  m_ShaderKeywords: _CELPRIMARYMODE_SINGLE _ENVIRONMENTREFLECTIONS_OFF _GLOSSYREFLECTIONS_OFF
-    _UNITYSHADOWMODE_NONE
+  m_Shader: {fileID: -6465566751694194690, guid: e87631564b11f44df856e594cea2c530,
+    type: 3}
+  m_ShaderKeywords: HARD_SHADING_ON _CELPRIMARYMODE_SINGLE _ENVIRONMENTREFLECTIONS_OFF
+    _GLOSSYREFLECTIONS_OFF _UNITYSHADOWMODE_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -73,7 +74,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -81,12 +90,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SmoothnessTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_E8C87502_Out_0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - HARD_SHADING: 1
+    - Vector1_962926F1: 1.1
     - _AlphaClip: 0
+    - _BacklightAmount: 2.3
     - _Blend: 0
     - _BumpScale: 1
     - _CelExtraEnabled: 0
@@ -94,6 +114,8 @@ Material:
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DabsRotation: 15
+    - _DabsTiling: 10
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 0
@@ -115,6 +137,8 @@ Material:
     - _LightContribution: 0
     - _Metallic: 0
     - _Mode: 0
+    - _NormalMult: 1
+    - _OcclusionMult: 1
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
     - _OutlineWidth: 0.01
@@ -153,4 +177,6 @@ Material:
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Specular: {r: 0.20754716, g: 0.20754716, b: 0.20754716, a: 0}
+    - _TextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
