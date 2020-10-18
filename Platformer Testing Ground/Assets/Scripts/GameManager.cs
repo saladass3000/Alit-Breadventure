@@ -40,13 +40,23 @@ public class GameManager : MonoBehaviour
         PlayerController.instance.gameObject.SetActive(false);
         CameraController.instance.cmBrain.enabled = false;
 
+        UiManager.instance.fadeToBlack = true;
+
         yield return new WaitForSeconds(2f);
 
+        HealthManager.instance.ResetHealth();
+
+        UiManager.instance.fadeFromBlack = true;
         
         PlayerController.instance.transform.position = respwanPos;
 
         CameraController.instance.cmBrain.enabled = true;
 
         PlayerController.instance.gameObject.SetActive(true);
+    }
+
+    public void SetSpawnPoint(Vector3 newSpawnPoint)
+    {
+        respwanPos = newSpawnPoint;
     }
 }
