@@ -25,6 +25,7 @@ public class ItemCollection : MonoBehaviour
     {
         if((other.gameObject.tag == "Player"))
         {
+            SfxManager.instance.Collect();
             Destroy(gameObject);
             ScoreData.totalRoti += 1;
         }

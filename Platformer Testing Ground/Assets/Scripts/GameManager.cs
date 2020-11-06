@@ -59,4 +59,10 @@ public class GameManager : MonoBehaviour
     {
         respwanPos = newSpawnPoint;
     }
+
+    public void Finish()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
