@@ -6,6 +6,7 @@ public class HealthManager : MonoBehaviour
 {
     public static HealthManager instance;
     public int currentHealth, maxHealth;
+    public GameObject hp1, hp2, hp3, hp4, hp5, panelLose;
     public float invincibleLength = 2f;
     private float invincCounter;
 
@@ -51,10 +52,30 @@ public class HealthManager : MonoBehaviour
         {
             currentHealth--;
 
-         if(currentHealth <= 0)
+         if(currentHealth <= 4)
          {
+                hp1.SetActive(false);
+         }
+          if(currentHealth <= 3)
+         {
+                hp2.SetActive(false);
+         }
+           if(currentHealth <= 2)
+         {
+                hp3.SetActive(false);
+         }
+            if(currentHealth <= 1)
+         {
+                hp4.SetActive(false);
+         }
+         
+        if (currentHealth <= 0)
+         {
+            hp5.SetActive(false);
             currentHealth = 0;
-            GameManager.instance.Respawn();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            panelLose.SetActive(true);
          }
          else
          {

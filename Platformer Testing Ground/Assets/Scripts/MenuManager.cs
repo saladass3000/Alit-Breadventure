@@ -30,6 +30,10 @@ public class MenuManager : MonoBehaviour
 
         SceneManager.LoadScene(1);
     }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void Quit()
     {

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public float gravityScale = 5f;
+    public Joystick joystick;
 
     private Vector3 moveDirection;
     public CharacterController charCont;
